@@ -5,3 +5,5 @@
 - I'm very bad at remembering shortcuts
 
 We have a saturday-before-dinner project!
+
+Turns out you cannot deploy fastapi python yet in cloudflare... Seemed like a toy anyway... running python inside V8...
