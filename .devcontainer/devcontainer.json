@@ -1,0 +1,70 @@
+{
+    "name": "DevForApplicationServer",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "development_machine",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.cwd": "/workspace",
+                "remote.localPortHost": "allInterfaces",
+                "typescript.reportStyleChecksAsWarnings": false, 
+
+                "workbench.editor.revealIfOpen": true,      // Why this is not the default???
+                "outline.collapseItems": "alwaysCollapse",
+
+                // BEGIN OF FORMATTERS RANT
+                    // ,*-~"`^"*u_                                      _u*"^`"~-*,
+                    //   p!^       /  jPw                            w9j \        ^!p
+                    // w^.._      /      "\_                      _/"     \        _.^w
+                    //      *_   /          \_      _    _      _/         \     _* 
+                    //        q /           / \q   ( `--` )   p/ \          \   p
+                    //        jj5****._    /    ^\_) o  o (_/^    \    _.****6jj
+                    //                 *_ /      "==) ;; (=="      \ _*
+                    //                  `/.w***,   /(    )\   ,***w.\"
+                    //                   ^ ilmk ^c/ )    ( \c^      ^
+                    //                           'V')_)(_('V'
+                    //                               `` ``
+                    // Uoooo thid you see the bat??? Now read 
+                    // I (jordi) don't like some robot rules to change how my code is formatted.
+                    // I undertand that you had many discussions with your present and past colleagues and you tried to find a 
+                    // solution that works for everyone. Let me tell you: THERE IS NO SOLUTION THAT WORKS FOR EVERYONE.
+                    // So my proposal is: We are humans, each one we have a character, a way of expressing. We are artisians of code.
+                    // Embracing a PEP thing is great when you are a community of hundreds of developers, but we are a small team, we enjoy to know each other. We are artisans that work together in Stile's workshop.
+                    // Our maximuma should be "I do code that is readable and easy to undertand. And I can format it in a way that I think it's best to understand. I'm happy to get an execution performance hit for that."
+                    // Of course we will be able to say "This is Jack's code", but isn't that beautfil? If we it's not easy to understand, we can go to Jack and say: "@!#? ?!! #!?$!!" 
+                    // and if Jack is gone, take the time it takes to understand and fix it.
+                    "editor.formatOnSave": false,               
+                    "notebook.formatOnSave.enabled": false,
+                    // P.D. See how this lines are indented, making a block that talks about formatters? I made it easy for you to spot that this is a group, I'm an artisian.
+                // END OF FORMATTERS RANT
+                
+                // ── Language server selection ────────────────────
+                "python.languageServer": "Pyright",
+                "python.analysis.typeCheckingMode": "basic",
+                
+                // ── Linting (Ruff) ───────────────────────────────
+                "ruff.enable": true,
+                "ruff.nativeServer": "on",
+                "python.linting.enabled": true,
+                "python.linting.ruffEnabled": true, 
+                "python.linting.pylintEnabled": false,
+                "python.linting.flake8Enabled": false,
+                "python.linting.mypyEnabled": false, // Pylance handles types
+
+                "[python]": {
+                },
+                "files.exclude": {
+                    "**/__pycache__": true,
+                    "**/__init__.py": true,
+                    "**/node_modules": true,
+                    "**/.pnpm-store": true
+                },
+            },
+            "extensions": [   
+            ]
+        }
+    }
+}
