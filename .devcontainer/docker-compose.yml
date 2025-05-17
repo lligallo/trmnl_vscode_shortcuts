@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  development_machine:
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile.dev
+    volumes:
+      - ..:/workspace
+    command: sleep infinity  # Keep the container running
+

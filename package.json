@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "install:cursor-vscode-extensions": "./install_extensions_for_cursor_or_vscode.sh",
+        "dev:install": "pnpm install && pnpm run install:cursor-vscode-extensions",
+        "dev": "pnpm wrangler dev",
+        "deploy": "pnpm wrangler deploy"
+    },
+     "devDependencies": {
+        "wrangler": "^4.15.2"
+    }
+}
